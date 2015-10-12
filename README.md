@@ -205,11 +205,11 @@ blend_all(None)
 
 ## Map past data to the new model
 
-Once our site is up a running, meaning ES, celery, rabbitmq, etc., we can
+Once our site is up and running, meaning ES, celery, rabbitmq, etc., we can
 migrate the records from the *production* environment to the *labs* setup.
 
 First we need to do the dump of the records, we recommend to do it by thousands
-to avoid overloading the memory in both sides.
+to avoid overloading the memory on both sides.
 
 ```python
 from invenio.search_engine import perform_request_search, print_record
@@ -252,7 +252,7 @@ for blob in split_blob(f):
 print missing
 ```
 
-We are currently working in a
+We are currently working on a
 [back to marc21](https://github.com/inveniosoftware/dojson/pull/30) utility
 which will generate a marc21 python representation that we can compare with the
 one `create_record` generates. Using this we can actually ensure that whatever
