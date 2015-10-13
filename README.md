@@ -243,11 +243,11 @@ from dojson.contrib.marc21.utils import create_record, split_blob
 from cds.base.dojson.marc21 import query_matcher
 
 missing = set()
-f = open('/tmp/cern_1.xml', 'r')
+f = open('/tmp/cern_1.xml', 'r').read()
 for blob in split_blob(f):
     rec_marc = create_record(blob)
     dojson_model = query_matcher(rec_marc)
-    missing.add(dojson.missin(rec_marc))
+    missing.add(dojson.missing(rec_marc))
 
 print missing
 ```
