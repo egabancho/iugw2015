@@ -274,5 +274,5 @@ create(open('/tmp/cern_1.xml', 'r'), input_type='marcxml')
 %debug
 ....
 ```
-## Albums in Invenio 2
+## How to handle different data models
 
