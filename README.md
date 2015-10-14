@@ -274,5 +274,12 @@ create(open('/tmp/cern_1.xml', 'r'), input_type='marcxml')
 %debug
 ....
 ```
-## How to handle different data models
+
+**UPDATE** Probably the way we do the updates of CDSLabs will change in future.
+Invenio is including more and more signals which generate sides effects before
+or after an action is performed.
+Because of that we are thinking about building an _Invenio Migration Kit_ which
+will help migrating the data using the new REST APIs that are growing more and
+more in Invenio _2.9_
+Stay tuned, we will post here the link to whatever we do to ease the migration.
 
